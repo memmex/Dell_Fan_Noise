@@ -1,21 +1,7 @@
-# Dell_Fan_Noise
-Dell Fan Noise Control Script - Silence Your Poweredge
+# Dell Fan Noise Control Script - Silence Your Poweredge
 
-
-
-
-
-    ### Dell Fan Control Commands
-    #
-    #
-    # Hex to Decimal: http://www.hexadecimaldictionary.com/hexadecimal/0x1a/
-    #
-    #
-    # print temps and fans rpms
-    ipmitool -I lanplus -H <iDRAC-IP> -U <iDRAC-USER> -P <iDRAC-PASSWORD> sensor reading "Ambient Temp" "FAN 1 RPM" "FAN 2 RPM" "FAN 3 RPM"
-    #
-    # print fan info
-    ipmitool -I lanplus -H <iDRAC-IP> -U <iDRAC-USER> -P <iDRAC-PASSWORD> sdr get "FAN 1 RPM" "FAN 2 RPM" "FAN 3 RPM"
+There are many complaints about noise of Dell PowerEdge servers.
+I did some research on how to manually controlling the PowerEdge fans and want to list the essential commands them again. These are already widely known and have been published in many forums al[I'm an inline-style link](https://www.google.com)
     #
     # enable manual/static fan control
     ipmitool -I lanplus -H <iDRAC-IP> -U <iDRAC-USER> -P <iDRAC-PASSWORD> raw 0x30 0x30 0x01 0x00
